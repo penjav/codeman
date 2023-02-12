@@ -1,0 +1,36 @@
+{% extends '_base.html' %}
+{% load static %}
+{% block title %} Contact Info {% endblock %}
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'contact.css' %}" />
+{% endblock style %}
+
+{% block content %}
+<section class="contactContainer">
+    <table>
+        <caption>Contact Information</caption>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Cell Phone</th>
+                <th>E-mail</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Tashi Nyima</td>
+                <td>234-654-9087</td>
+                <td>nangchen@gmail.com</td>
+            </tr>
+            <tr>
+                <td>Nyangtsa Penpa</td>
+                <td>765-876-3421</td>
+                <td>nangchen@gmail.com</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+
+{% endblock %}

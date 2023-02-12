@@ -10,8 +10,52 @@
 </head>
 
 <body>
+    <!--Header-->
+    <header>
+        <article>
+            <!-- <img src="../image/nangchenLogo.png" alt="logo"/> -->
+            <!-- <img src="{% static 'nangchen/images/apple-touch-icon.png' %}" alt="logo" /> -->
+            <marquee>
+                <h1>Nangchen Nyernga</h1>
+            </marquee>
+        </article>
+    </header>
+
+    <!-- navigation-->
+    <section class="navContainer">
+        <span>Nangchen Nyernga</span>
+        <input type="checkbox" class="Toggler" id="navToggle" />
+        <label for="navToggle" class="navToggleLabel">
+            <!-- <input type="checkbox" class="navToggler" id="navToggle"/> -->
+            <span></span>
+        </label>
+        <!-- <span>Nangchen Community, North America</span> -->
+        <!-- <input type="checkbox" class="Toggler" id="navToggle"/>  -->
+        <nav>
+            <ul>
+                <li><a href="{% url 'nangchen' %}">Home</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+                <li><a href="{% url 'history' %}">History</a></li>
+            </ul>
+            <!-- <h3>Nangchen Nyernga</h3> -->
+        </nav>
+    </section>
+
+    <!--- main -->
     {% block content %}
+
     {% endblock %}
+
+    <!--- footer -->
+    <footer>
+        &#xa9 N25 2023
+        <section>
+            <form action="https://www.google.com/search">
+                <input type="text" name="q" value="Search">
+            </form>
+        </section>
+    </footer>
 </body>
 
 </html>

@@ -1,0 +1,35 @@
+{% extends "_base.html" %}
+
+{% load static %}
+
+<!-- title-->
+{% block title %}
+history
+{% endblock title %}
+
+<!--- styles override -->
+{% block style %}
+<link rel="stylesheet" href="{% static 'history.css' %}" />
+{% endblock style %}
+
+<!-- content -->
+{% block content %}
+
+<section class="aboutContainer">
+    <h3>Brief Introduction of Nangchen,Tibet</h3>
+    <p>
+        In the past, Nangchen was one of the 5 small kingdoms of eastern Tibet. These Kingdoms were
+        independent from both China and Tibetan government in Lhasa and were ruled by a king.
+        The former Nangchen Kingdom expanded over all of modern day Yushu Tibetan Autonomous prefecture in southern
+        Qinghai.
+        The king of nangchen ruled this region until the late 1950's and early 1960's. During
+        the Kham rebellion from 1956 to 1959, the king of Nangchen sent out several platoons of
+        soldiers on horseback to defend against the Communist Chinese soldiers. The last king of Nangchen to sit on the
+        throne was King Tashi Tsewang. He was killed during the Cultural Revelution.
+    </p>
+    <p class="cite">
+        Bumang Pema Tashi, President of publishing a book about Nangchen Nyernga,accessed 7 January 2023,
+        https://www.nangchennyernga.com.</p>
+</section>
+
+{% endblock %}
