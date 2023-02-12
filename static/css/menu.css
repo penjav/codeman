@@ -18,7 +18,9 @@ img {
 }
 
 header {
-    background: url("../../nangchen/images/palace.jpg") no-repeat center right, linear-gradient(to bottom, #f1f3f5, #66cd88);
+    /* background: url("../../images/palace.jpg") no-repeat center right, linear-gradient(to bottom, #f1f3f5, #66cd88); */
+    background: url(".././images/palace.jpg") no-repeat center right,
+        linear-gradient(to bottom, #f1f3f5, #66cd88);
     background-size: cover;
     background-blend-mode: hard-light;
     /* padding: 2rem; */
@@ -159,7 +161,9 @@ nav {
 /* for larger screen */
 @media screen and (min-width:780px) {
     header {
-        background: url("../image/palace.jpg") no-repeat center left, linear-gradient(to bottom(#f1f3f5, #66cd88));
+        /* background: url("../image/palace.jpg") no-repeat center left, linear-gradient(to bottom(#f1f3f5, #66cd88)); */
+        background: url(".././images/palace.jpg") no-repeat center left,
+            linear-gradient(to bottom(#f1f3f5, #66cd88));
         background-size: cover;
         background-blend-mode: hard-light;
         display: grid;
