@@ -61,8 +61,5 @@ p {
     p {
         grid-column: 2 / 3;
         grid-row: 2 / 3;
-        /* display: flex; */
-        /* align-items: flex-end; */
-        padding: 1.5rem;
     }
 }
