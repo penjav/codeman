@@ -1,0 +1,27 @@
+{% extends '_base.html' %}
+{% load static %}
+
+<!--- title -->
+{% block title %} about {% endblock title %}
+
+<!-- style -->
+{% block style %}
+<link rel="stylesheet" href="{% static 'about.css' %}" />
+{% endblock %}
+
+<!-- content -->
+{% block content %}
+<section class="aboutContainer">
+    <h3>About Us</h3>
+    <p>
+        Nangchen Nyernga is a non-profit organization started by Dukdak Nyima, the President
+        and Tenzin the Vice President in 1999. It was one of the first non-profit organization in our Tibetan
+        Community in New York and New Jersey at the time.The goal of our organization is same as that of all other NGOs,
+        that is, work towards public
+        and for the social Wellfare of our Community. If you have any questions regarding our social service, please
+        contact our current President, Tashi Nyima and Vice President Nyangtsa Penpa.
+
+    </p>
+</section>
+
+{% endblock content %}
