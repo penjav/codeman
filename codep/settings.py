@@ -14,10 +14,11 @@ from pathlib import Path
 
 # from environs import Env
 import environs
-import os
+
+# import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
+# BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 # Quick-start development settings - unsuitable for production
@@ -32,6 +33,8 @@ env = environs.Env()
 
 # read the .env file
 environs.Env.read_env()
+
+BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = env("SECRET_KEY")
 
