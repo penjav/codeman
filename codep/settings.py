@@ -12,30 +12,20 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 
 from pathlib import Path
 
-# from environs import Env
-import environs
-
-# import os
+from environs import Env
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-# BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-# env = Env()
-# env.read_env()
-# secret = Env["SECRET"]
-
-env = environs.Env()
-
-# read the .env file
-environs.Env.read_env()
-
-BASE_DIR = Path(__file__).resolve().parent.parent
-
+env = Env()
+env.read_env()  # read .env file if it exist
+# required variables
+# git_user = env("GITHUB_USER")
 SECRET_KEY = env("SECRET_KEY")
 
 
