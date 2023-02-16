@@ -34,7 +34,7 @@ DEBUG = env.bool("DEBUG", default=False)
 
 # SECRET_KEY is required
 
-SECRET_KEY = env.str("SECRET_KEY")
+SECRET_KEY = os.environ.get("SECRET_KEY")
 
 print("debug", DEBUG)
 print("secret key", SECRET_KEY)
