@@ -36,16 +36,16 @@ DEBUG = env.bool("DEBUG", default=False)
 
 SECRET_KEY = env.str("SECRET_KEY")
 
-
+print("debug", DEBUG)
+print("secret key", SECRET_KEY)
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
 
 SECURE_HSTS_SECONDS = False
 SECURE_SSL_REDIRECT = False
 SESSION_COOKIE_SECURE = False
 CSRF_COOKIE_SECURE = False
 
-ALLOWED_HOSTS = ["127.0.0.1", "localhost", "codeman-production.up.railway.app"]
+ALLOWED_HOSTS = ["codeman-production.up.railway.app"]
 
 
 # Application definition
