@@ -34,10 +34,9 @@ DEBUG = env.bool("DEBUG", default=False)
 
 # SECRET_KEY is required
 
-SECRET_KEY = os.environ.get("SECRET_KEY")
+SECRET_KEY = env.str("SECRET_KEY")
 
-print("debug", DEBUG)
-print("secret key", SECRET_KEY)
+
 # SECURITY WARNING: don't run with debug turned on in production!
 
 SECURE_HSTS_SECONDS = False
