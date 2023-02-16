@@ -24,9 +24,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 env = Env()
 env.read_env()  # read .env file if it exist
-# required variables
-# git_user = env("GITHUB_USER")
-SECRET_KEY = env("SECRET_KEY")
+
+# Override in .env for local development
+DEBUG = env.bool("DEBUG", default=False)
+
+# SECRET_KEY is required
+
+SECRET_KEY = env.str("SECRET_KEY")
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
