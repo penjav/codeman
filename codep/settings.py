@@ -13,8 +13,6 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 from pathlib import Path
 from dotenv import load_dotenv
 
-# from environs import Env
-# import environs
 import os
 
 load_dotenv()
@@ -27,8 +25,7 @@ load_dotenv()
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-# env = environs.Env()
-# env.read_env()  # read .env file if it exist
+
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
