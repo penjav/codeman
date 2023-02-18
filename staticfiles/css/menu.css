@@ -1,0 +1,236 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+header {
+    /* background: url("../../images/palace.jpg") no-repeat center right, linear-gradient(to bottom, #f1f3f5, #66cd88); */
+    background: url(".././images/palace.jpg") no-repeat center right,
+        linear-gradient(to bottom, #f1f3f5, #66cd88);
+    background-size: cover;
+    background-blend-mode: hard-light;
+    /* padding: 2rem; */
+    display: grid;
+    /* grid-template-columns: 10px 1fr 10px; */
+    grid-template-columns: repeat(4, 0.5fr);
+    grid-template-rows: 0.5fr 1fr 0.5fr;
+    gap: 20px;
+}
+
+header>article {
+    grid-column: 2 / 4;
+    grid-row: 1 / 2;
+    align-items: center;
+    justify-content: center;
+}
+
+header>article>marquee>h1 {
+    color: #ffffff;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+header>article>img {
+    opacity: 0.90;
+}
+
+.navContainer {
+    position: -webkit-sticky;
+    top: 0;
+    height: 50px;
+    width: 100%;
+    padding: 0 2rem;
+    background-color: #448620;
+    /* background-color: darkgreen; */
+    border-bottom: 1px solid #e0e5eb;
+    box-shadow: 0px 2px 8px #448620;
+    padding: 1.5rem;
+    z-index: 1;
+    /* to sit items side by side */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navContainer>span {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 0.85rem;
+
+}
+
+.navContainer>label {
+    position: relative;
+    /* background: yellow;  */
+    width: 2rem;
+    height: 1.55rem;
+    padding: 0.25rem;
+}
+
+.navContainer>input#navToggle {
+    display: none;
+}
+
+.navContainer>label>span,
+.navContainer>label>span::before,
+.navContainer>label>span::after {
+    content: '';
+    position: absolute;
+    background: #ffffff;
+    width: 1.75rem;
+    height: 0.125rem;
+    top: 0.75rem;
+    transition: 0.15s ease-in-out;
+}
+
+.navContainer>label>span::before {
+    top: -0.75rem;
+}
+
+.navContainer>label>span::after {
+    top: 0.75rem;
+}
+
+.navContainer input#navToggle:checked~label>span {
+    width: 0;
+    background: #e0e5eb;
+}
+
+.navContainer input#navToggle:checked~label>span::before {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+.navContainer input#navToggle:checked~label>span::after {
+    transform: rotate(-45deg);
+    top: 0;
+}
+
+/* nav hidden when not checked checkbox. */
+nav {
+    position: absolute;
+    top: 51px;
+    width: 700px;
+    z-index: -1;
+    opacity: 0;
+}
+
+.navContainer input#navToggle~nav>ul>li {
+    list-style-type: none;
+}
+
+.navContainer input#navToggle~nav>ul>li>a {
+    display: inline-block;
+    text-decoration: none;
+    line-height: 45px;
+    width: 100%;
+    /* border-bottom: 1px solid #f1f3f5; */
+    /* margin: 0 auto; */
+    color: #000000;
+}
+
+/* when checked do something */
+.navContainer input#navToggle:checked~nav {
+    top: 51px;
+    opacity: 1;
+    background-color: #ffffff;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 1;
+    padding: 5px;
+
+}
+
+/* for larger screen */
+@media screen and (min-width:780px) {
+    header {
+        /* background: url("../image/palace.jpg") no-repeat center left, linear-gradient(to bottom(#f1f3f5, #66cd88)); */
+        background: url(".././images/palace.jpg") no-repeat center left,
+            linear-gradient(to bottom(#f1f3f5, #66cd88));
+        background-size: cover;
+        background-blend-mode: hard-light;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(3, 0.5fr);
+        gap: 20px;
+    }
+
+    header>article {
+        grid-column: 4 / 5;
+        grid-row: 1 / 2;
+    }
+
+    header>article>marquee>h1 {
+        color: #ffffff;
+        font-size: 2rem;
+        text-transform: uppercase;
+    }
+
+    header>article>img {
+        opacity: 0.90;
+    }
+
+    .navContainer {
+        display: flex;
+        align-items: center;
+    }
+
+    .navContainer input#navToggle {
+        display: none;
+    }
+
+    .navContainer>label.navToggleLabel>span {
+        display: none;
+    }
+
+    .navContainer>span {
+        color: #ffffff;
+        font-weight: bold;
+        font-size: 1rem;
+        padding: 20px;
+        z-index: 1;
+    }
+
+    .navContainer>nav {
+        position: initial;
+        /* original*/
+        margin: 20px;
+        opacity: 1;
+    }
+
+    .navContainer>nav>ul {
+        background-color: #448620;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 20px;
+
+    }
+
+    .navContainer>nav>ul>li {
+        list-style-type: none;
+    }
+
+    .navContainer input#navToggle~nav>ul>li>a {
+        text-decoration: none;
+        color: #ffffff;
+    }
+
+}
