@@ -1,1 +1,1 @@
-web: gunicorn codep.wsgi --log-file -
+web: gunicorn codep.wsgi 
