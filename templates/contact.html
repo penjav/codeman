@@ -1,5 +1,16 @@
 {% extends '_base.html' %}
 {% load static %}
+
+{% block marquee %}
+<marquee>
+    {% if losar %}
+    <h1>Happy Losar</h1>
+    {% else %}
+    <h1>Nangchen Nyernga</h1>
+    {% endif %}
+</marquee>
+{% endblock marquee %}
+
 {% block title %} Contact Info {% endblock %}
 
 {% block style %}

@@ -15,17 +15,47 @@ def nangchen(request):
 
 
 def about(request):
-    return render(request, "about.html")
+    losar = datetime.datetime.now()
+    return render(
+        request,
+        "about.html",
+        {
+            "losar": losar.month == 2 and losar.day == 20,
+        },
+    )
 
 
 def contact(request):
-    return render(request, "contact.html")
+    losar = datetime.datetime.now()
+    return render(
+        request,
+        "contact.html",
+        {
+            "losar": losar.month == 2 and losar.day == 20,
+        },
+    )
 
 
 def history(request):
-    return render(request, "history.html")
+    losar = datetime.datetime.now()
+    return render(
+        request,
+        "history.html",
+        {
+            "losar": losar.month == 2 and losar.day == 20,
+        },
+    )
 
 
 def _base(request):
-    lo = datetime.datetime.now()
-    return render(request, "_base.html", {"newyear": True})
+    losar = datetime.datetime.now()
+    return render(
+        request,
+        "_base.html",
+        {
+            "losar": losar.month == 2 and losar.day == 20,
+            "losar": losar.month == 2 and losar.day == 21,
+            "losar": losar.month == 2 and losar.day == 22,
+            "losar": losar.month == 2 and losar.day == 22,
+        },
+    )

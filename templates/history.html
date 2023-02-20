@@ -2,6 +2,16 @@
 
 {% load static %}
 
+{% block marquee %}
+<marquee>
+    {% if losar %}
+    <h1>Happy Losar</h1>
+    {% else %}
+    <h1>Nangchen Nyernga</h1>
+    {% endif %}
+</marquee>
+{% endblock marquee %}
+
 <!-- title-->
 {% block title %}
 history
