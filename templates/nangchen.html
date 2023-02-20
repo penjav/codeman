@@ -1,17 +1,33 @@
 {% extends '_base.html' %}
 {% load static %}
 
+{% block marquee %}
+<marquee>
+    {% if losar %}
+    <h1>Happy Losar</h1>
+    {% else %}
+    <h1>Nangchen Nyernga</h1>
+    {% endif %}
+</marquee>
+{% endblock marquee %}
+
 {% block content %}
 <!--- main -->
 <section class="main">
     <article>
+
         <figure class="events">
             <img src="{% static 'images/poster.jpg' %}" alt="annual_events" />
             <figcaption>
                 <h3>Past events</h3>
             </figcaption>
-            <p>Nangchen Nyernga, cultural show in 2022.</p>
+            <p>Nangchen Nyernga, cultural show in 2022 was fantastic. From the dance perfomers and event organizers, it
+                was clearly shown that The president, Vice-president and members of Nangchen Nyernga worked really
+                hard to achieve what was presented to us on that day.
+            </p>
+
         </figure>
+
     </article>
     <article>
         <figure>
@@ -45,7 +61,10 @@
             <figcaption>
                 <h3>Palace</h3>
             </figcaption>
-            <p>Nangchen kings residence</p>
+            <p>The picture above is the residence of Tashi Tsewang Topgye in Nangchen. His wife and their children
+                were stayed there until his presence. The history of his small palace such as when it was built and who
+                built it were not known.
+            </p>
         </figure>
 
     </article>

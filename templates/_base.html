@@ -18,9 +18,15 @@
         <article>
             <!-- <img src="../image/nangchenLogo.png" alt="logo"/> -->
             <img src="{% static '/images/apple-touch-icon.png' %}" alt="logo" />
+            {% block marquee %}
             <marquee>
+                {% if newyear %}
+                <h1>Happy New Year</h1>
+                {% else %}
                 <h1>Nangchen Nyernga</h1>
+                {% endif %}
             </marquee>
+            {% endblock %}
         </article>
     </header>
 

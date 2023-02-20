@@ -1,9 +1,17 @@
 from django.shortcuts import render
+import datetime
 
 
 # Create your views here.
 def nangchen(request):
-    return render(request, "nangchen.html")
+    losar = datetime.datetime.now()
+    return render(
+        request,
+        "nangchen.html",
+        {
+            "losar": losar.month == 2 and losar.day == 20,
+        },
+    )
 
 
 def about(request):
@@ -19,4 +27,5 @@ def history(request):
 
 
 def _base(request):
-    return render(request, "_base.html")
+    lo = datetime.datetime.now()
+    return render(request, "_base.html", {"newyear": True})
