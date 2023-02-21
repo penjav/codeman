@@ -45,11 +45,11 @@ SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True
 
 ALLOWED_HOSTS = [
+    "www.nangchen25.com",
+    "nangchen25.com",
     "127.0.0.1",
     "localhost",
     "codeman-production.up.railway.app",
-    "www.nangchen25.com",
-    "nangchen25.com",
 ]
 
 
