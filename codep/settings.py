@@ -44,7 +44,13 @@ SECURE_SSL_REDIRECT = False
 SESSION_COOKIE_SECURE = False
 CSRF_COOKIE_SECURE = False
 
-ALLOWED_HOSTS = ["127.0.0.1", "localhost", "codeman-production.up.railway.app"]
+ALLOWED_HOSTS = [
+    "127.0.0.1",
+    "localhost",
+    "codeman-production.up.railway.app",
+    "www.nangchen25.com",
+    "nangchen25.com",
+]
 
 
 # Application definition
