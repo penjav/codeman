@@ -49,8 +49,6 @@ SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
 ALLOWED_HOSTS = [
     "www.nangchen25.com",
     "nangchen25.com",
-    "127.0.0.1",
-    "localhost",
     "codeman-production.up.railway.app",
 ]
 
