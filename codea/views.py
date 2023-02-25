@@ -9,7 +9,7 @@ def nangchen(request):
         request,
         "nangchen.html",
         {
-            "losar": losar.month == 2 and losar.day == 21,
+            "losar": losar.month == 2 and losar.day == 25,
         },
     )
 
@@ -20,7 +20,7 @@ def about(request):
         request,
         "about.html",
         {
-            "losar": losar.month == 2 and losar.day == 21,
+            "losar": losar.month == 2 and losar.day == 25,
         },
     )
 
@@ -31,7 +31,7 @@ def contact(request):
         request,
         "contact.html",
         {
-            "losar": losar.month == 2 and losar.day == 21,
+            "losar": losar.month == 2 and losar.day == 25,
         },
     )
 
@@ -42,7 +42,7 @@ def history(request):
         request,
         "history.html",
         {
-            "losar": losar.month == 2 and losar.day == 21,
+            "losar": losar.month == 2 and losar.day == 25,
         },
     )
 
@@ -53,6 +53,6 @@ def _base(request):
         request,
         "_base.html",
         {
-            "losar": losar.month == 2 and losar.day == 21,
+            "losar": losar.month == 2 and losar.day == 25,
         },
     )
